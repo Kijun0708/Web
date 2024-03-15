@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one { color : blue}
+        .two {text-decoration: underline;}
+        .three{background-color: yellow;}
+
+
+        /* 띄어쓰기 하면 자손 선택자 */
+        .four .five{font-style: italic;}
+
+        /* 동시 선택자 */
+        .six.seven {font-style: italic;} 
+    </style>
+</head>
+<body>
+    <p class="one">문단입니다.</p>
+    <p class="two">문단입니다.</p>
+    <p class="three">문단입니다.</p>
+    
+    <!-- 
+        
+        
+        CSS Framework
+        - Bootstrap
+        
+        
+        
+    -->
+
+    <!-- class는 동시에 사용 가능 -->
+    <p class="one two three">문답입니다.</p>
+
+    
+</body>
+</html>

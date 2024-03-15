@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        
+            
+            CSS 선택자
+            1. 전체 선택자
+                - * {}
+                - 모든 태그를 선택한다.
+            2. 태그 선택자
+                - 태그명을 사용해서 태그를 선택한다.
+            3. 아이디 선택자
+                - <태그명 id="title">
+                - 태그명#title {}
+                - 문서내에 유일한 식별자
+                 
+            4. 클래스 선택자
+                - <태그명 class="member">
+                - 태그명.member {}
+
+            5. 그룹 선택자
+                - 1~4번 선택자들을 그룹을 묶어서 일괄 적용
+
+
+        */
+        /* p{color: red;}
+        div{color: blue;}
+        i{color: yellow;} */
+
+        /* p,div,i{color: blue;} */
+
+        #title, #p2, div, .paragraph {color: red;} 
+
+    </style>
+</head>
+<body>
+    <h1 id="title">h1 태그입니다.</h1>
+
+    <p id = "p1" class="paragraph">p 태그입니다.</p>
+    <p id = "p2" class="paragraph">p 태그입니다.</p>
+    <p id = "p3" class="paragraph">p 태그입니다.</p>
+    <div>div 태그입니다.</div>
+    <b>b 태그입니다.</b>
+    <p>p 태그입니다.</p>
+    <i class = "paragraph">i 태그입니다.</i>
+    
+    <h1>h1 태그입니다.</h1>
+
+    <p>p 태그입니다.</p>
+    <div>div 태그입니다.</div>
+    <div>div 태그입니다.</div>
+    <b>b 태그입니다.</b>
+    <div>div 태그입니다.</div>
+    <i>i 태그입니다.</i>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+
+              CSS 선택자
+            1. 전체 선택자
+                - * {}
+                - 모든 태그를 선택한다.
+            2. 태그 선택자
+                - 태그명을 사용해서 태그를 선택한다.
+            3. 아이디 선택자
+                - <태그명 id="title">
+                - 태그명#title {}
+                - 문서내에 유일한 식별자
+                 
+            4. 클래스 선택자
+                - <태그명 class="member">
+                - 태그명.member {}
+
+            5. 그룹 선택자
+                - 1~4번 선택자들을 그룹을 묶어서 일괄 적용
+
+            6. 자식 선택자
+                - Child Selector
+                - 부모선택자 > 자식선택자 {}
+                - 조건 역할 > 검색대상 {}    
+                - 친부모를 조건으로 자식을 선택
+
+            7. 자손 선택자
+                - Descendant Selector
+                - 부모선택자 자식선택자 {}
+
+            8. 인접 형제 선택자
+                - Adjacent Sibling Selector
+                - 형제선택자 + {}
+                
+            9. 형제 선택자
+                - Sibling Selector
+                - 형제선택자 ~ 선택자 {}
+
+        */  
+        /* 가장 끝에있는 선택자를 보통 찾음 */
+        /* +는 p태그 위에 div가 있는걸 찾음 */
+       /* div + p { color:blue} */
+       
+
+       /* 인접 형제 선택자
+       p + p { color:blue}
+       
+       /* p태그 바로 아래에 있는 div */
+       /* p + div {color:red}  */
+       
+
+       /* 내위에(바로위가 아니어도 됨) div가 있으면 조건만족 */
+       div ~ p { color:blue}
+       
+
+    </style>
+</head>
+<body>
+        <p>p 태그입니다.</p>
+        <div>div 태그입니다.</div>
+        <p>p 태그입니다.</p>
+        <p>p 태그입니다.</p>
+        <span>span 태그입니다.</span>
+        <div>div 태그입니다.</div>
+        <p>p 태그입니다.</p>
+    
+</body>
+</html>

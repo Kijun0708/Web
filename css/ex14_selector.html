@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+
+            - 동일한 선택자를 2번 이상 정의 가능하다.
+            - 동일한 선택자가 같은 속성을 정의 > 마지막 속성이 적용 > 수정 or 재정의
+            - 동일한 선택자가 다른 속성을 정의 > 모두 적용
+        
+        */
+
+
+
+        /* 
+        
+            선택자 우선 순위
+            - 서로 다른 선택자가 동일한 태그를 선택했을 때 > 동일한 속성 적용> 속성 충돌 > 어떤 선택자의 속성을 적용할지?
+            - 점수 계산 > 점수가 가장 높은 선택자를 적용
+
+
+            1. 태그선택자: 개당 1점
+            2. 클래스선택자: 개당 10점
+            3. 아이디선택자: 개당 100점
+        
+        */
+        div{
+            color: blueviolet;
+        }
+        div#box1.box{color:purple}
+        #box1.box{color: green}
+        div#box1{color: orange}
+        #box1{
+            color: yellow;
+        }
+        .box{
+            color:red
+        }
+        div{
+            color: blue;          
+        }
+        
+        body > div.box{color : yellow}
+
+        body > div.box{color: blue;}
+
+        /* 클래스를 아무리 붙여도 id는 못이김 */
+        #box1{ color:red}
+        
+        div{
+            color: blue
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div id="box1" class="box aaa bbb ccc ddd eee fff ggg hhh iii jjj">상자1</div>
+    <div id="box2" class="box">상자2</div>
+
+
+
+</body>
+</html>

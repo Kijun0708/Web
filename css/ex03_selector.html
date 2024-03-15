@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+
+            CSS 구문(문법)
+            - 선택자(selector) {속성명: 값;}
+            - 선택자 {속성명: 값; 속성명: 값;}
+
+            div(선택자){ 
+
+                color(속성명): red(값);
+
+            }
+
+            선택자, Selector
+            - HTML 소스에서 특정 태그를 검색하는 도구
+            - 왜? 태그르 찾아서 태그 자신 or 내용물에 서식을 적용하기 위해서
+
+
+            CSS 선택자
+            1. 전체 선택자
+                - * {}
+                - 모든 태그를 선택한다.
+            2. 태그 선택자
+                - 태그명을 사용해서 태그를 선택한다.
+            3. 아이디 선택자
+                - <태그명 id="title">
+                - 태그명#title {}
+                - 문서내에 유일한 식별자
+                 
+            4. 클래스 선택자
+                - <태그명 class="member">
+                - 태그명.member {}
+
+
+        /* *{
+            color : blue;                                          
+        } */
+
+            /* 이럴경우 모든 p태그에 적용 */
+        /* p {
+            color: red;
+
+        }
+        div {
+            color: blue;
+        }
+        b {
+            color: yellow;
+        } */ 
+
+        /* 이름은 생략 가능 */
+        h1#title{
+
+            color: red;
+        }
+        /* 여기서 p 태그를 빼면 *로 자동으로 변함 > 이러면 class 선언한 모든게 변함 */
+        p.paragraph{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 id="title">h1 태그입니다.</h1>
+
+    <p id = "p1" class="paragraph">p 태그입니다.</p>
+    <p id = "p2" class="paragraph">p 태그입니다.</p>
+    <p id = "p3" class="paragraph">p 태그입니다.</p>
+    <div>div 태그입니다.</div>
+    <b>b 태그입니다.</b>
+    <p>p 태그입니다.</p>
+    <i class = "paragraph">i 태그입니다.</i>
+    
+    <h1>h1 태그입니다.</h1>
+
+    <p>p 태그입니다.</p>
+    <div>div 태그입니다.</div>
+    <div>div 태그입니다.</div>
+    <b>b 태그입니다.</b>
+    <div>div 태그입니다.</div>
+    <i>i 태그입니다.</i>
+
+</body>
+</html>

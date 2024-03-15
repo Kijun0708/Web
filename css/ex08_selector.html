@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+     /* 
+
+              CSS 선택자
+            1. 전체 선택자
+                - * {}
+                - 모든 태그를 선택한다.
+            2. 태그 선택자
+                - 태그명을 사용해서 태그를 선택한다.
+            3. 아이디 선택자
+                - <태그명 id="title">
+                - 태그명#title {}
+                - 문서내에 유일한 식별자
+                 
+            4. 클래스 선택자
+                - <태그명 class="member">
+                - 태그명.member {}
+
+            5. 그룹 선택자
+                - 1~4번 선택자들을 그룹을 묶어서 일괄 적용
+
+            6. 자식 선택자
+                - Child Selector
+                - 부모선택자 > 자식선택자 {}
+                - 조건 역할 > 검색대상 {}    
+                - 친부모를 조건으로 자식을 선택
+
+            7. 자손 선택자
+                - Descendant Selector
+                - 부모선택자 자식선택자 {}
+
+            8. 인접 형제 선택자
+                - Adjacent Sibling Selector
+                - 형제선택자 + {}
+                
+            9. 형제 선택자
+                - Sibling Selector
+                - 형제선택자 ~ 선택자 {}
+
+            10. 의사 클래스, Pseudo Class
+                - 실제 태그에는 class가 정의되어 있지 않지만, 선택자에서는 존재하는
+                class 처럼 사용되는 클래스
+                - <a> 태그에만 제공 -> 대부분 태그에 적용
+                - HTML5 -> 대량 증가    
+
+        */  
+
+        /* a{
+            color: black;
+            text-decoration: none;   링크 밑줄 없애는 속성*/
+        
+        /* a.one{color: blue;} */
+
+        /* a:link {color : green}
+        a:visited {color : red}
+        a:active {color : orange}
+        /* 마우스 올리고 있으면 나타나는 색 
+        a:hover {color : cornflowerblue}  */
+        
+        
+        a{
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color : red;
+            text-decoration: underline;
+        }
+
+
+        .data{
+            outline : none;
+        }
+
+        /* indicator */
+        .data:focus{
+            /* color:red; */
+            background-color: yellow;
+        }
+        
+</style>
+
+</head>
+<body>
+
+    <h1>링크</h1>
+    <a href="https://google.com" class ="one">구글</a>
+    <a href="https://naver.co.kr">네이버</a>
+
+    <h1>텍스트 박스</h1>
+    
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+    <input type="text" class ="data"><br>
+
+
+</body>
+</html>

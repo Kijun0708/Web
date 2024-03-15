@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        
+             CSS 선택자
+            1. 전체 선택자
+                - * {}
+                - 모든 태그를 선택한다.
+            2. 태그 선택자
+                - 태그명을 사용해서 태그를 선택한다.
+            3. 아이디 선택자
+                - <태그명 id="title">
+                - 태그명#title {}
+                - 문서내에 유일한 식별자
+                 
+            4. 클래스 선택자
+                - <태그명 class="member">
+                - 태그명.member {}
+
+            5. 그룹 선택자
+                - 1~4번 선택자들을 그룹을 묶어서 일괄 적용
+
+            6. 자식 선택자
+                - Child Selector
+                - 부모선택자 > 자식선택자 {}
+                - 조건 역할 > 검색대상 {}    
+                - 친부모를 조건으로 자식을 선택
+
+            7. 자손 선택자
+                - Descendant Selector
+                - 부모선택자 자식선택자 {}
+
+
+        */
+
+        /* b{
+            color: blue;
+        } */
+
+        /* b.primary{
+            color: blue;
+        } */
+
+       /* ol > li > b{
+            color: green
+        } */
+
+        ol b{
+            color: green
+        }
+
+        p > b{
+            color: blue;
+        }
+
+
+    </style>
+
+    
+</head>
+<body>
+    <h1>목록</h1>
+    <ol>
+
+        <li>자바 <b class="primary">주요</b> 문법</li>
+        <li>오라클 <b class="primary">주요</b> 문법</li>
+        <li>HTML <b class="primary">주요</b> 문법</li>
+        
+    </ol>
+    
+    <ul>
+        
+        <li>자바 <b>주요</b> 문법</li>
+        <li>오라클 <b>주요</b> 문법</li>
+        <li>HTML <b>주요</b> 문법</li>
+
+
+    </ul>
+
+    <p>안녕하세요. 저는 <b>홍길동</b>입니다.</p>
+
+</body>
+</html>
