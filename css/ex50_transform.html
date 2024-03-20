@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/box.css">
+    <style>
+
+        .box{
+            margin: 10px;
+        }
+
+        /* 
+        
+            변형, tranform
+            - 요소의 위치, 크기, 회전, 비틀기(왜곡)
+            - transform: 값;
+
+            값(함수)
+            1. translate() > 위치 변형
+            2. scale() > 배율(크기) 변형 > 이때 글자 크기도 변형됨.
+            3. rotate() > 회전 변형
+            ----------------------------------------------
+            4. skew() > 왜곡 변형
+            5. matrix() > XXX(행렬을 알아야함)
+
+
+            1. position: 레이아웃
+            2. transform: 인터페이스(사용법)
+
+
+        */
+
+        #box2{
+            /* transform: translate(100px, 100px); */   /* position 보다 빠름 */
+            /* transform: scale(-1,-1); */
+            /* width: 400px;
+            height: 400px; */
+            margin-left: 300px;
+            transform: rotate(45deg) skew(20deg, 20deg);
+            /* transform: skew(30deg, 30deg); */
+        }
+
+        #cat{
+            margin-bottom: 300px;
+        }
+
+        /* #cat img:hover{
+            transform: translate(0px, -15px);
+        } */
+
+        /* #cat:hover img{
+            transform: translate(0px, -15px);
+        } */
+
+        /* #cat img:hover + img{
+            transform: translate(0px, -15px);
+        } */
+        
+        /* #cat img:hover ~ img{
+            transform: translate(0px, -15px);
+        } */
+
+        /* #cat:hover img:nth-child(even){
+            transform: translate(0px, -15px);
+        } */
+        
+        /* #cat:hover img:nth-child(odd){
+            transform: translate(0px, -15px);
+        } */
+
+        /* #cat:hover img:hover{
+            transform: scale(1.4,1.4);
+        } */
+
+        /* #cat:hover img:hover{
+            transform: translate(0px, -55px) scale(-1.4,-1.4);
+        } */
+        
+        #cat:hover img:hover{
+            transform: rotate(3deg)
+        }
+
+        #txt1{
+            margin: 200px;
+            font-size: 2rem;
+            padding: 10px;
+            /* transform: scale(-1 ,-1); */
+            transform: rotate(270deg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="box1" class="box bgcolor-red border10"></div>
+    <div id="box2" class="box bgcolor-yellow border10">상자</div>
+    <div id="box3" class="box bgcolor-blue border10"></div>
+
+    <h1>고양이</h1>
+    <div id="cat">
+        <img src="images/catty01.png">
+        <img src="images/catty02.png">
+        <img src="images/catty03.png">
+        <img src="images/catty04.png">
+        <img src="images/catty05.png">
+    </div>
+
+    <div>
+        <input type="text" id="txt1">
+    </div>
+</body>
+</html>

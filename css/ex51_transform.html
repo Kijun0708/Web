@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+
+            인접한 인라인 태그 사이의 공백을 없애는 방법
+            1. 직접 공백을 지운다.
+            2. font-size :0;
+            3. float > 추가 코드 발생(clear)
+            4. flex > 추가 코드 발생(X)
+        */
+
+        #menu{
+            font-size: 0;
+            width: 630px;
+            margin: 0 auto;
+            transform: translate(0px, -100px);
+        }
+
+        #menu > img:hover{
+            transform: translate(0px,90px);
+        }
+
+        #sub-menu{
+            /* border: 10px solid black; */
+            font-size: 0;
+            width: 125px;
+            transform: translate(-105px,0px);
+        }
+
+        #sub-menu > img:hover{
+            transform: translate(90px,0px);
+
+        }
+
+        #menu > img{
+            transition: all .7s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav id="menu">
+        <img src="images/rect_icon01.png">
+        <img src="images/rect_icon02.png">
+        <img src="images/rect_icon03.png">
+        <img src="images/rect_icon04.png">
+        <img src="images/rect_icon05.png">
+    </nav>
+    
+    <nav id="sub-menu">
+        <img src="images/rect_icon01.png">
+        <img src="images/rect_icon02.png">
+        <img src="images/rect_icon03.png">
+        <img src="images/rect_icon04.png">
+        <img src="images/rect_icon05.png">
+    </nav>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+#weather {
+    width:750px ;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+}
+
+#weather .temp{
+    clear: both;
+}
+
+
+#weather .day{
+    font-size: 17px;
+    color: #424242;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+#weather .box{
+    width: 120px;
+    height: 145px;
+    margin: 0 auto;
+    border-right: 1px solid #f2f3f3;
+    float: left;
+    
+}
+
+#weather .date{
+    text-align: center;
+    margin-bottom: 11px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+
+#weather .cloud { 
+    background-image: url(../images/naver_weather.png);
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-position: -350px -80px;
+    width: 47px;
+    height: 47px;
+    float: left;
+    margin-left: 9px;
+}
+
+#weather .low{
+    margin-left: 36px;
+    color: #3172e7;
+    font-size: 15px;
+}
+
+#weather .high{
+    color: #CD3534;
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+#weather .rainfall{
+    margin-left: 35px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #3172e7;
+}
+
+#weather .rainfall .none{
+    color: #8f8f8f;
+    font-weight: 400;
+}

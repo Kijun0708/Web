@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e437c6533a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        /* 
+        
+            CSS 애니메이션
+            1. transition
+            2. animation
+
+        */
+
+        body{
+            margin: 100px;
+        }
+
+        #box{
+            width: 200px; height: 200px;    
+            background-color: gold;
+
+            /* transition: all 1s; */
+        }
+        /* #box1{
+            width: 200px; height: 200px;
+            background-color: aqua;
+        } */
+
+
+        body:hover #box{
+            /* width: 400px; */
+            /* animation-name: key3; */
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            /* animation-delay: 3s; */
+            animation-iteration-count: 2;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes key1 {
+            from{
+                width: 200px;
+            }
+            to{
+                width: 400px;
+            }
+
+        }
+
+        @keyframes key2 {
+            0%{width: 200px;}
+            50%{width: 400px;}
+            100%{width: 200px;}
+
+        }
+
+        @keyframes key3{
+            0%  {transform: translate(0px,0px);}
+            25% {transform: translate(300px,0px);}
+            50% {transform: translate(300px,300px);}
+            75% {transform: translate(0px,300px);}
+            100%{transform: translate(px,px);}
+        }
+
+        /* 진동 효과 */
+        .effect:hover{
+            animation-name: key-effect;
+            animation-duration: 0.1s;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes key-effect{
+            0%  {transform: translate(0px,0px);}
+            25% {transform: translate(-1px,0px);}
+            50% {transform: translate(0px,0px);}
+            75% {transform: translate(1px,0px);}
+            100%{transform: translate(0px,0px);}
+        }
+
+        .effect2 > i {
+            color: coral;
+        }
+
+        .effect2:hover > i{
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="box">상자</div>
+
+    <!-- <div id="box1">상자</div> -->
+
+
+    <button class="effect">글쓰기</button>
+    <button class="effect">가입하기</button>
+    <button class="effect">검색하기</button>
+
+    <i class="fa-solid fa-check"></i>
+    <button class="effect2">
+        
+        <i class="fa-solid fa-star"></i>
+       글쓰기
+
+
+    </button>
+        
+
+
+</body>
+</html>

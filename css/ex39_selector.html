@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        
+            가상 클래스
+            1. :first-child
+            2. :last-child
+            3. :nth-child(n)
+            4. :nth-last-child()
+
+            n
+            1. 숫자: index
+            2. 수열: 2n
+            3. 수열: even(짝수),odd(홀수)
+        
+        */
+
+        /* li:first-child{
+            color: blue;
+        }
+
+        li:last-child{
+            color: red;
+        }
+
+        li:nth-child(3){
+            color: green;
+        }
+
+        li:nth-last-child(3){
+            color: orange;
+        } */
+
+        li:nth-child(2n){   /* 2n > 짝수번째 선택 */
+            color: blue;
+        }
+
+        li:nth-child(2n+1){
+            color: red;
+        }
+
+        #tbl1 {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        #tbl1 td{
+            border: 1px solid gray;
+            padding: 5px 10px
+        }
+
+        /* #tbl1 tr:first-child{
+            background-color: gold;
+        } */
+
+        /* #tbl1 td:first-child{
+            background-color: gold;
+        } */
+        
+        /* #tbl1 tr:nth-child(2n){
+            background-color: #EEE;
+        } */
+
+        #tbl1 tr:nth-child(even) td:nth-child(odd){
+            background-color: gold ;
+        }
+
+        #tbl1 tr:nth-child(odd) td:nth-child(even){
+            background-color: gold;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>목록</h1>
+
+    <ul id="list1">
+        <li>사과</li>
+        <li>귤</li>
+        <li>바나나</li>
+        <li>포도</li>
+        <li>참외</li>
+        <li>복숭아</li>
+        <li>딸기</li>
+        <li>파인애플</li>
+        <li>망고</li>
+        <li>수박</li>
+    </ul>
+    
+    <ul id="list1">
+        <li>사과</li>
+        <li>귤</li>
+        <li>바나나</li>
+        <li>포도</li>
+        <li>참외</li>
+        <li>복숭아</li>
+        <li>딸기</li>
+        <li>파인애플</li>
+        <li>망고</li>
+        <li>수박</li>
+    </ul>
+
+
+
+    <h1>테이블</h1>
+
+    <!-- table#tbl1>tr*20>td*5{data} -->
+    <table id="tbl1">
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+    </table>
+
+
+
+
+</body>
+</html>

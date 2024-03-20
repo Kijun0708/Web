@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        .box{
+            border: 1px solid black;
+            width: 1400px;
+            height: 150px;
+            margin: 0 auto;
+        }
+
+        .ball{
+
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid black;
+            margin-top: 48px;
+            text-align: center;
+            font-size: 70px;
+            font-weight: bold;
+            transition-property: all;
+            transition-duration: 2s;
+            
+        }
+
+        #a{
+            background-color: tomato;
+            transition-timing-function: linear ;
+        }
+
+        #b{
+            background-color: gold;
+            transition-timing-function: ease;
+        }
+        #c{
+            background-color: orange;
+            transition-timing-function: ease-in;
+        }
+        #d{
+            background-color: greenyellow;
+            transition-timing-function: ease-out;
+        }
+        #e{
+            background-color: cornflowerblue;
+            transition-timing-function: ease-in-out;
+        }
+
+        #list:hover .ball{
+            transform: translate(1298px,0px) rotate(3600deg);
+            
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="list">
+        <div class="box">
+            <div id="a" class="ball">A</div>
+        </div>
+        <div class="box">
+            <div id="b" class="ball">B</div>
+        </div>
+        <div class="box">
+            <div id="c" class="ball">C</div>
+        </div>
+        <div class="box">
+            <div id="d" class="ball">D</div>
+        </div>
+        <div class="box">
+            <div id="e" class="ball">E</div>
+        </div>
+    </div
+</body
+</html>

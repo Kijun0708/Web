@@ -1,0 +1,28 @@
+
+
+
+
+
+.table{
+    border: 1px solid #555; /* solid > 테이블 선 종류 (실선) */
+    border-collapse: collapse; /* collapse > 실선 합치기  separate > 실선 두개 */
+   
+}
+
+/* 따로 따로 적어야함 */
+.table th, .table td {
+    border: 1px solid #555;
+    padding: 3px;
+    /* margin: 100px; > margin값 의미없음 */
+}
+
+.table th{
+    background-color: #EEEEEE;
+}
+
+.table tr:hover{
+    background-color: orange;
+}
+
+
+

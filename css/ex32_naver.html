@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{height: 100%;}
+        body{
+            background-color: #DDDDDD;
+            margin: 0;
+        }
+        main{
+            background-color: #fff;
+            width: 800px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;   /* relative에 0,0을 주면 제자리에 있음 > 자식의 absolute의 기준이 될때 사용 */
+            left: 0;
+            top: 0;
+        }
+
+        main > header {
+            border-bottom: 1px solid #999;
+            text-align: center;
+            padding: 30px;
+
+        }
+
+        main > header > #search{
+            border: 1px solid #999;
+            padding: 5px;
+            width: 400px;
+            outline: none;
+            
+        }
+
+        #list{
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid #999;
+            width: 410px;
+            background-color: #fff;
+            left: 194px;
+            top: 56px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <main>
+
+        <header>
+            <input type="text" id="search">
+            <div id="list">
+                <div class="item">자바</div>
+                <div class="item">자바 설치</div>
+                <div class="item">JDK 설치</div>
+                <div class="item">자바 실행하기</div>
+                <div class="item">자바 프로그램 강좌</div>
+            </div>
+        </header>
+    </main>
+
+    
+    
+</body>
+</html>

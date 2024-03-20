@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list input{
+            display: block;
+            margin-bottom: 5px;
+            border: 1px solid #444;
+            outline: none;
+            padding: 4px;
+            background-color: #FFF;
+            color: #444;
+        }
+
+        /* #list input:required {background-color: gold;}
+        #list input:optional {background-color: #CCC;} */
+        /* #list input:disabled {background-color: gold;} */
+        /* #list input:enabled{background: #ccc;} */
+
+        #list input:read-only{background-color: gold;}
+        #list input:read-write{background-color: #ccc;}
+
+
+        input[type=checkbox]{
+            opacity: .1;
+        }
+
+
+        #cb1:checked + div{
+            display: none;
+        }
+
+        #item{
+            border: 1px solid black;
+            width: 200px;
+
+        }
+
+        #item #cb2:checked + label + div{
+            display: block;
+        }
+
+        #item div{
+            display: none;
+            border-top: 1px solid black;
+            padding: 15px;
+        }
+
+        #item #cb2{
+            display: none;
+        }
+
+        #item label{
+            font-size: 1.5rem;
+            font-family: Arial;
+            font-variant: small-caps;
+            display: block;
+            padding: 10px;
+            background-color: cornflowerblue;
+            color: white;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="item">
+        <input type="checkbox" id="cb2">
+        <label for="cb2">JavaScript</label>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic recusandae ad, adipisci accusantium saepe perspiciatis earum fugit ipsa distinctio a non at quod doloremque ullam porro, rem iure commodi accusamus dolorem exercitationem! Accusamus nisi nam debitis saepe iste, sunt facilis rerum, nobis ad dicta, dolorem dolore animi quaerat! Tempora, ipsam.</div>
+    </div>
+
+    <hr>
+
+
+
+
+    <label for="cb1">설명 감추기</label>
+    <input type="checkbox" id="cb1">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eligendi a quidem delectus esse? Recusandae accusamus debitis dolores repudiandae omnis ducimus pariatur soluta molestias autem earum asperiores, vitae, harum unde!</div>
+
+    <hr>
+
+
+    <div>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </div>
+
+
+
+
+
+    <!-- div#list>input[type="text" value="$"]*10 -->
+    <div id="list">
+        <input type="text" value="1" required>
+        <input type="text" value="2" readonly>
+        <input type="text" value="3" readonly>
+        <input type="text" value="4">
+        <input type="text" value="5" required>
+        <input type="text" value="6" disabled>
+        <input type="text" value="7">
+        <input type="text" value="8" disabled>
+        <input type="text" value="9">
+        <input type="text" value="10" required>
+    </div>
+    
+</body>
+</html>

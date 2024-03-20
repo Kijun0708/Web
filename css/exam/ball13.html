@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 650px;
+            height: 800px;
+            border: 10px solid black;
+            margin: 20px;
+        }
+
+        .ball{
+            width: 50px;
+            height: 50px;
+            border: 10px solid black;
+            display: inline-block;
+            margin-left: 10px;
+            border-radius: 50px;
+            animation-name: key-ball;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: alternate;
+        }
+
+        @keyframes key-ball{
+            from{transform: translate(0px,0px);}
+            to{transform: translate(0px,730px);}
+        }
+
+        #b1{
+            margin-left: 30px;
+            background-color: tomato;
+            animation-duration: .8s;
+        }
+        #b2{
+            background-color: orange;  
+            animation-duration: .5s;             
+        }
+        #b3{
+            background-color: gold;
+            animation-duration: .7s;
+        }
+        #b4{
+            background-color: green;
+            animation-duration: .87s;
+        }
+        #b5{
+            background-color: blue;
+            animation-duration: .5s;
+        }
+        #b6{
+            background-color: purple;
+            animation-duration: 1s;
+        }
+        #b7{
+            background-color: palevioletred;
+            animation-duration: .9s;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="b1" class="ball"></div>
+        <div id="b2" class="ball"></div>
+        <div id="b3" class="ball"></div>
+        <div id="b4" class="ball"></div>
+        <div id="b5" class="ball"></div>
+        <div id="b6" class="ball"></div>
+        <div id="b7" class="ball"></div>
+    </div>
+</body>
+</html>
