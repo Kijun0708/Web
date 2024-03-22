@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="문제">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/css/images/문제/images.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/timer5.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/lp.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/number.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/rollover3.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/disc.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/pseudo.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/catty.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/폼태그+행추가.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/style2.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/dog-foot.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/foot.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/rect_icon07.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/보안키.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/exam01.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/transition4.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/resume.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/wall.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/고양이잡기.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/cat.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/tape.zip!/" />
+      <root url="jar://$PROJECT_DIR$/css/images/문제/rect.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

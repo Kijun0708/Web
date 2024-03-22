@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ex02.js"></script>
+    <script>
+        alert('반갑습니다.');
+    </script>
+</head>
+<body>
+    <!-- 
+
+        HTML 문서 > JavaScript 적용 방법
+
+        1. 인라인 방식(X) > 이벤트 핸들러(Event Handler) == 이벤트
+            - 태그에 직접 기재
+            - 대부분 태그 > onXXX 속성 제공
+
+        2. 임베디드 방식
+            - <script> 태그
+
+        3. 외부 방식
+            - *.js
+            - 참조
+
+        자바 스크립트로 하는건 대부분 onXXX 으로 시작함 onclick="자바스크립트 영역"
+     -->
+
+     <input type="button" value="버튼" onclick="alert('안녕하세요.');">
+    
+</body>
+</html>

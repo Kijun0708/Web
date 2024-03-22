@@ -1,0 +1,156 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    /* border: 10px solid blue; */
+    /* height: 100%; */
+
+}
+
+body{
+    /* border: 10px solid tomato; */
+    /* height: 100%; */
+    height: 100vh;  /* viewport-height  >> 보이는 화면 전부다 */
+}
+
+main{
+    display: grid;
+    grid-template-rows: 50px 200px auto;
+    grid-template-columns: 200px auto;
+    height: 100vh;
+}
+
+
+#menu{
+    background-color: orange;
+    grid-row: 1/4;
+    text-align: center;
+}
+
+#menu > h1{
+    color: white;
+}
+
+#menu > hr{
+    border: 0;
+    border-bottom: 1px dashed white;
+}
+
+#menu > ul{
+    padding: 0;
+    color: white;
+}
+
+#menu >div{
+    color: white;
+    font-size: 14px;
+}
+
+#search{
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -1px;
+}
+
+#search input[type=text]{
+    border: 1px solid gray;
+    width: 400px;
+    padding: 5px;
+    outline: none;
+}
+
+#search button{
+    width: 100px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+#banner{
+    background-color: green;
+}
+
+#banner img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+#content{
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-rows: 2, 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#content > div {
+    background-color: greenyellow;
+}
+
+#content > div > img {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid white;
+    padding: 3px;
+}
+
+#content > div > div {
+
+    margin: 30px;
+    font-size: 14px;
+    color: #555;
+
+}
+
+/* 스마트폰 + 태블릿(세로) */
+@media screen and (max-width:768px){
+
+    main{
+        display: grid;
+        grid-template-rows: 210px 50px 200px auto;
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+
+
+    #menu{
+        grid-row: auto;
+    }
+    
+    #menu > hr{
+        display: none;
+    }
+    
+    #menu > ul{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    #menu > ul > li {
+        list-style-type: none;
+        margin: 0px 7px;
+    }
+    
+    #menu >div{
+        color: white;
+        font-size: 14px;
+    }
+
+    #banner{
+
+    }
+
+    #content{
+        grid-template-rows: 2, 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

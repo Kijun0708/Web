@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        window.document.all.txt1.value = new Date();
+    </script>
+<body>
+
+    <!-- 
+
+        자바스크립트 구문의 실행 순서
+        - 위 > 아래
+
+        자바스크립트 디버깅
+        - 값 확인 > 출력
+        1. alert(값);
+        2. document.write(값);
+        3. console.log(값); //정석
+
+    -->
+    <input type="text" name="txt1" size="50">
+    <script>
+        // window.document.all.txt1.value = new Date();
+        alert(new Date());
+        document.write(new Date());
+        console.log(new Date());
+    </script>
+    
+</body>
+</html>
