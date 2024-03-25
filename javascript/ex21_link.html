@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>링크</h1>
+    <a href="https://naver.com" name="link1">네이버</a>
+    <hr>
+    <input type="button" value="버튼" name="btn1">
+
+    <script>
+
+        //자바스크립트의 배열
+        var list = ['강아지','고양이', '팬더', '병아리', '닭'];
+
+        console.log(list[0]);
+
+        document.all['btn1'].onclick = m1;
+
+        function m1(){
+            // alert();
+            // document.links[0];
+            
+
+            // ---------------------------BOM 기능---------------------------------
+            // alert(document.links['link1'].href);
+            document.links['link1'].href = 'https://google.com';
+            document.links['link1'].target = '_blank'; /* 새창으로 열기 */
+            document.links['link1'].title = '구글로 이동합니다.';
+
+
+
+            // ---------------------------DOM 기능---------------------------------
+            document.links['link1'].innerText = '구글';
+
+
+        }
+
+    </script>
+
+
+</body>
+</html>

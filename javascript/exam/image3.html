@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>고양이</h1>
+    <form name="form1">
+        <div>
+            <img src="../images/catty01.png" name="cat">
+            <img src="../images/catty02.png" name="cat">
+            <img src="../images/catty03.png" name="cat">
+            <img src="../images/catty04.png" name="cat">
+            <img src="../images/catty05.png" name="cat">
+        </div>
+    </form>
+
+    <script>
+        
+        // document.images['cat'].mouseover = m1;
+
+        for (var i=0; i<document.form1.cat.length; i++) {
+
+            document.form1.cat[i].onmouseover = m1;
+            document.form1.cat[i].onclick = m1;
+            document.form1.cat[i].onkeydown = m1;
+        }
+        function m1(){
+            if(event.type == 'mouseover'){
+                var currentWidth = event.target.width;
+                event.target.width = currentWidth + 5;  
+            }
+            if (event.type == 'click'){
+
+                event.target.width = 128;
+
+            }
+            if(event.type == 'keydown'){
+                if()
+            }
+
+        }
+        
+
+
+
+    </script>
+
+</body>
+</html>

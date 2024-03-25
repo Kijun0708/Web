@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: #555;
+        }
+        div > input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>데이터 입력</h1>
+    <form name="form1">
+        <div>
+            이름: <input type="text" name="name">
+        </div>
+        <div>
+            나이: <input type="text" name="age">
+        </div>
+        <div>
+            별명: <input type="text" name="nick">
+        </div>
+        <input type="button" value="Long" name="btn1">
+        <input type="button" value="Short" name="btn2">
+    </form>
+
+
+    <script>
+
+        document.form1.btn1.onclick = m1;
+        document.form1.btn2.onclick = m2;
+
+        function m1(){
+            document.form1.name.style.width = "600px";
+            document.form1.age.style.width = "600px";
+            document.form1.nick.style.width = "600px";
+        }
+        
+        function m2(){
+            document.form1.name.style.width = "300px";
+            document.form1.age.style.width = "300px";
+            document.form1.nick.style.width = "300px";
+        }
+    </script>
+
+
+
+</body>
+</html>
