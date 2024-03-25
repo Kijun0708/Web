@@ -31,8 +31,12 @@
 
             document.form1.cat[i].onmouseover = m1;
             document.form1.cat[i].onclick = m1;
-            document.form1.cat[i].onkeydown = m1;
+
         }
+        
+        document.onkeydown = m1;
+
+
         function m1(){
             if(event.type == 'mouseover'){
                 var currentWidth = event.target.width;
@@ -44,7 +48,16 @@
 
             }
             if(event.type == 'keydown'){
-                if()
+                if(event.keyCode >= 49 && event.keyCode <= 53){
+                    var index = event.keyCode - 49;
+                    var currentWidth = document.form1.cat[index].width;
+                    document.form1.cat[index].width = currentWidth + 5;
+
+                }else if(event.keyCode == 27){
+                    for(var i =0; i<5; i++){
+                        document.form1.cat[i].width = 128;
+                    }
+                }
             }
 
         }
