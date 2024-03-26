@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            border: 1px solid #777;
+            width: 200px;
+        }
+        fieldset > label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #tbl1 {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        #tbl1 td {
+            border: 1px solid gray;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1>테이블 생성하기</h1>
+
+    <fieldset>
+        <legend>행x열</legend>
+        <label>행: <select id="selRow"></select></label>
+        <label>열: <select id="selColumn"></select></label>
+        <input type="button" value="생성하기" id="btn1">
+    </fieldset>
+
+    <table id="tbl1"></table>
+
+    <script>
+        var selRow = document.getElementById('selRow');
+        var selColumn = document.getElementById('selColumn');
+        var btn1 = document.getElementById('btn1');
+        var tbl1 = document.getElementById('tbl1');
+
+        btn1.onclick = m1;
+
+        for(var i =1; i<=10; i++){
+            // var op = new Option(i,i);
+            selRow.options.add(new Option(i,i));
+            selColumn.options.add(new Option(i,i));
+        }
+
+        selRow.selectedIndex = 4;
+        selColumn.selectedIndex = 4;
+        function m1(){
+           //<tr> , <td> 동적 생성하기
+            var temp =''; //누적변수
+            
+            // tbl1.innerHTML = '<tr></tr>';
+
+            for(var i=0; i<selRow.value; i++){
+                temp += '<tr>'
+
+                    for(var j=0; j<selColumn.value; j++){
+                        temp += '<td>';
+                        temp += (i + ',' + j);    
+                        temp += '</td>';
+                    }
+
+
+                temp += '</tr>'    
+            }//for
+
+            tbl1.innerHTML = temp;
+
+        }
+
+
+    </script>
+
+</body>
+</html>

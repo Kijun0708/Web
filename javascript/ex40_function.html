@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+    <script>
+
+        /* 
+        
+            JavaScript Function
+            - "함수는 1급 객체이다."
+            - 함수를 객체처럼 취급한다. > 함수를 값으로 사용할 수 있다.
+
+            1. 함수를 변수나 데이터 구조에 담을 수 있다.(저장)
+            2. 함수를 매개변수에 전달할 수 있다.
+            3. 함수를 반환값으로 사용할 수 있다.
+
+            - *** 값(변수,상수)이 들어가는 모든 위치에 함수가 들어갈 수 있다.
+
+
+            JavaScript에서 함수를 선언하는 방법
+            1. 함수 선언문
+            2. 함수 표현식(리터럴) == 익명 함수
+
+        
+        */
+
+        //1. 함수 선언문
+        // function m1(){
+        //     alert('m1');
+        // }
+        // m1();
+
+        //2. 함수 표현식(리터럴)
+        // (function () {
+        //     alert('익명 함수');
+        // })();
+
+
+
+        let f1 = function(){
+            alert('익명 함수');
+        };
+
+        f1();
+
+        // console.log(typeof f1); //function
+
+        document.getElementById('btn1').onclick = m1;
+
+        function m1(){
+            alert();
+        }
+
+        document.getElementById('btn2').onclick = function(){
+            alert();
+        };
+
+
+        //m2();
+
+        function f2(){
+            alert('f2');
+        }
+        function f3(){
+            alert('f3');
+        }
+        
+        function f4(fn){
+            fn();
+        }
+
+        //함수를 매개변수로 넣을때는 값으로 취급 () 빼고!
+        // f4(f2);
+        // f4(f3);
+        // f4(function(){
+        //     alert('함수');
+        // })
+
+        
+        // setTimeout(function(){
+        //     alert('띵');
+        // }, 3000);
+
+        function f5(){
+            alert('f5에요');
+        }
+
+        function f6(){
+            return f5;
+        }
+
+        let result = f6();
+        result();
+
+    </script>
+</body>
+</html>
