@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+    <script>
+
+        //클로저, Closure
+
+        //전역 함수
+        function outer(){
+
+            //지역 변수(outer)
+            let a = 10;
+            console.log('a',a);
+
+            function inner(){
+
+                //지역 변수(inner)
+                let b = 20;
+                console.log('b',b);
+                
+            }
+            
+            inner();
+            // console.log('b',b);    > 지역변수 사용 불가능 오류
+            
+
+        }
+
+        outer();
+        //console.log('a',a);   > 지역변수 사용 불가능 오류
+
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        let num1 =100; //전역 변수
+
+        btn1.onclick = function() {
+            console.log(num1);
+
+            let num2 = 200; //지역 변수(btn1.onclick)
+            console.log(num2);
+
+            btn2.onclick = function(){
+
+                let num3 = 300; //지역 변수(btn2.onclick)
+                console.log(num3);
+                console.log('num2', num2); //******** closure > 원래라면 num2는 버튼1이 실행되고 생성된후 바로 삭제되지만 이후 함수에 사용수 있도록 임시보관함.
+                console.log('num1', num1);
+
+            };
+            
+        }
+
+
+    </script>
+    
+</body>
+</html>

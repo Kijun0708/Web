@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tbl1{border: 1px solid black; border-collapse: collapse;}
+        #tbl1 td{border: 1px solid black; padding: 10px 10px;}
+
+    </style>
+</head>
+<body>
+    <h1>테이블</h1>
+
+    <table id="tbl1">
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+        <tr>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+            <td>item</td>
+        </tr>
+    </table>
+
+    <script>
+
+        //Hover Table
+        const tbl = document.getElementById('tbl1');
+
+        // const tr = tbl.firstElementChild.children; -> 배열로 반환하는데 진짜배열이 아님
+        //tr.forEach(row=>console.log(row)) 로 파악 가능
+
+        const tr = document.querySelectorAll('#tbl1 tr');
+
+        tr.forEach(row => {
+            
+            row.onmouseover = function(){
+                // event.target.bgColor = 'gold';    target은 이벤트발생시점 가장 밑에 있는걸 가르킨다. tr을 이벤트 타겟으로 했지만 tr밑에 td가 있기때문에 td가 바뀌는것.
+
+                event.currentTarget.bgColor = 'gold';
+
+                // row.bgColor = 'gold';
+                // this.bgColor ='gold';
+            };
+
+            row.onmouseout = function(){
+                event.currentTarget.bgColor='transparent';
+            }
+
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

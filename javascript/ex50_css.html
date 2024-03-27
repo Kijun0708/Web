@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e437c6533a.js" crossorigin="anonymous"></script>
+    <style>
+        #box1{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+        }
+
+        .one{font-size: 3rem;}
+        .two{color: coral;}
+        .three{text-decoration: underline;}
+
+
+        .four{
+            font-size: 3rem;
+            color: coral;
+            font-style: italic;
+            font-family: '궁서체';
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+
+    <input type="button" value="버튼" id="btn1">
+    <input type="button" value="버튼" id="btn2">
+    <hr>
+    <div id="box1" style="width: 200px;">상자</div>
+
+    <h2>Text</h2>
+
+    <div class="tool">
+        <button type="button" id="btn3"><i class="fa-solid fa-minus"></i></button>
+        <button type="button" id="btn4"><i class="fa-solid fa-plus"></i></button>
+    </div>
+    
+    <p id="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti magni quis pariatur doloribus ad ut, ipsum est voluptate culpa omnis mollitia commodi molestias itaque repudiandae voluptatum deserunt! Officiis assumenda, ut nam odio doloremque consectetur in minus! Nam blanditiis quo molestiae officiis neque laboriosam doloremque porro voluptas expedita, quasi architecto ut excepturi voluptatibus. Obcaecati repellendus sed consectetur beatae quod excepturi tempora illum nobis iusto explicabo voluptate, aspernatur itaque amet quia, autem voluptas minima cum tempore dolore ducimus magni. Pariatur amet doloremque harum porro! Iste et quisquam quidem nihil iusto suscipit a distinctio ut libero quos. Molestiae, quo harum. Nemo at repudiandae accusantium, eveniet commodi vitae nesciunt a voluptatum, explicabo necessitatibus laborum ut sint et aliquam aperiam, architecto cumque ad deleniti cupiditate minima rerum dolores unde error doloribus. Assumenda velit id repudiandae temporibus? Quasi pariatur in hic officiis quo cumque corrupti, dolorum ipsa animi autem inventore quod fuga architecto possimus ad dignissimos a maxime velit quos. Tempora quisquam tenetur aliquam rem cumque sit, exercitationem facilis laudantium cupiditate accusamus vel porro explicabo eum iste qui fuga libero ad alias molestias fugiat dolor sapiente veritatis, accusantium quia? Enim iste veritatis molestias adipisci vero ad, expedita eum ut accusantium voluptatem impedit minus magnam, suscipit molestiae aut dolores modi? Porro animi dolore quo soluta praesentium nulla velit nemo cumque nam, beatae veritatis ut error corporis, pariatur cupiditate reiciendis hic natus eaque dignissimos alias similique nostrum harum explicabo! Modi magni nihil delectus harum odio pariatur laudantium ipsum perferendis suscipit corrupti alias nulla, sunt exercitationem, reiciendis officiis quis ratione animi eligendi porro commodi deleniti itaque, quia id earum. Cum, sit maiores tempore quibusdam nobis saepe fugit, quam nihil quisquam suscipit, error rerum! Rem molestiae odio nemo nulla excepturi voluptatibus, accusamus rerum ex nisi qui tenetur, iure quae ducimus! Ipsa dolorum cupiditate vero officiis harum provident totam pariatur dolores!</p>
+
+    <script>
+
+        btn2.onclick = function(){
+            alert();
+        }
+
+
+
+        document.getElementById('btn1').onclick = function(){
+            const box = document.getElementById('box1');
+
+            /* 
+
+                JavaScript > CSS 조작
+                1. 모든 태그 > style 속성 제공
+                    - 자바스크립트 > style 프로퍼티 제공
+                    *** CSS 속성명 > 프로퍼티명
+                        - 속성명이 동일하게 제공한다.
+                        - 케밥 표기법(-) > 캐멀 표기법으로 변경
+                    *** CSS 속성값
+                        - 대부분이 문자열로 작성
+                2. class 조작        
+            
+            */
+           //Cannot set properties of null
+            //<div id="box" style="color:box;">
+            //조직적인 관리 힘듦
+            // box1.style = 'color: blue; font-size: 3rem;';
+
+            box1.style.color = 'blue';
+
+
+            box1.style.fontSize = '3rem';
+            // box1.style['font-size'] ='2rem';
+
+            //현재 상자의 너비?
+            // box1.style.width = '400px';
+            // alert(box1.style.width); > 인라인 태그가 없으면 읽어올 수가 없음
+
+            // 버튼 클릭 > 상자의 너비 + 50px
+            box1.style.width = parseInt(box1.style.width) + 50 + 'px';
+
+            //CSS 적용 방식과 무관 > 현재 객체에 적용된 모든 CSS 속성 반환
+            const list = window.getComputedStyle(box1);
+
+            // console.log(list);
+            // alert(list.width);
+            // alert(list.getPropertyValue('width'));
+            // alert(list.border);
+
+            
+        }
+
+        let size = 16;
+
+
+        document.getElementById('btn3').onclick = function(){
+            // alert(document.getElementById('content').style.fontSize);
+            size--;
+            document.getElementById('content').style.fontSize = size + 'px';
+            document.title = size;
+        }
+        
+        document.getElementById('btn4').onclick = function(){
+            size++;
+            document.getElementById('content').style.fontSize = size + 'px';
+            document.title = size;
+
+        }
+
+        document.getElementById('btn2').onclick = function(){
+
+            // box1.className = 'one'
+
+            // box1.classList.add('one');
+            // box1.classList.add('two');
+            // box1.classList.add('three');
+
+            // box1.style.fontSize = '3rem';
+            // box1.style.color ='coral';
+            // box1.style.fontStyle = 'italic';
+            // box1.style.fontFamily = '궁서체';
+
+            box1.classList.add('four');
+
+
+        }
+
+    </script>
+
+</body>
+</html>

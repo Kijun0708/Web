@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{padding: 50px;}
+        #p1{background-color: tomato;}
+        #p2{background-color: gold;}
+        #p3{background-color: cornflowerblue;}
+
+    </style>
+</head>
+<body>
+
+    <div id="p1" class="box">
+        <div id="p2" class="box">
+            <div id="p3" class="box"></div>
+        </div>
+    </div>
+
+    <input type="text" id="txt1">
+
+    <script>
+
+        //이벤트 버블링(Event Bubbling) vs 위로 올라가면서 이벤트를 발생시킴 (자바스크립트 방식)
+        //이벤트 터널링(Event Tunneling) == 이벤트 캡쳐링(Capturing)
+
+        const p1 = document.getElementById('p1');
+        const p2 = document.getElementById('p2');
+        const p3 = document.getElementById('p3');
+
+
+        // document.body.onclick = function(){
+        //     alert('body');
+        // }
+
+        // p1.onclick = function(){
+        //     alert('빨강');
+        //     event.cancelBubble = true;
+
+        // };
+        
+        // p2.onclick = function(){
+        //     alert('노랑');
+        //     event.cancelBubble = true; // 이벤트를 끊음
+        // };
+        
+        // p3.onclick = function(){
+        //     alert('파랑');
+        //     // event.cancelBubble = true;
+        //     event.stopPropagation(); //표준방식 기능은 cancleBubble과 같음
+        // };
+
+        window.onkeydown = function(){
+
+            if(event.keyCode==51){ //3
+                location.href = 'https://naver.com';
+            }
+
+        };
+
+
+
+        document.getElementById('txt1').onkeydown = function(){
+            
+            if(event.keyCode >= 48 && event.keyCode<=57){
+                alert('숫자');
+                event.cancelBubble =true;
+            }
+
+        };
+
+        //자바스크립트 이베느 전파 방식 > 버블링
+
+
+        //1. BOM 이벤트
+        //- 버블링
+        //2. DOM 이벤트
+        //- 버블링 or 터널링
+
+        //true > 터널링 위에서부터 밑으로 이벤트 발생
+        p1.addEventListener('click',function(){
+            alert('빨강');
+            event.stopPropagation();
+        },true);
+        p2.addEventListener('click',function(){
+            alert('노랑');
+        },true);
+        p3.addEventListener('click',function(){
+            alert('파랑');
+        },true);
+
+
+
+
+    </script>
+    
+</body>
+</html>

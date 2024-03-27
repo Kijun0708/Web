@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        //객체 생성
+        const o1 = new Object();
+        
+        o1.name = '홍길동';
+        o1.hello = function(){
+            alert();
+        };
+
+        const o2 = {
+            name: '홍길동',
+            hello : function(){
+                alert();
+            }
+        };
+
+        //생성자 함수
+        //- 클래스의 역할을 대신
+        //- 자바의 생성자와 유사(+a)
+
+        /* 
+        
+            class User{
+                private String name;
+                private int age;
+
+                public User(String name, int age){
+                    this.name = name;
+                    this.age = age;
+                }
+            }
+        
+        */
+
+        //생성자 함수?
+        //- 함수명이 파스칼 표기법으로 작성한다. (문법X)
+        function User(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        //*** 생성자 함수는 절대로 일반함수처럼 그냥 호출하면 안된다.
+        //User('홍길동', 20);
+
+        //*** 생성자 함수는 반드시 new 연산자와 함께 같이 사용해야 한다.
+        //1. new 호출 > new Object() 구문 실행  
+        //2. User() 호출 > 1번에서 만든 객체를 초기화
+        let hong = new User('홍길동',20);
+        let lee = new User('이순신',22);
+
+
+        const list = new Array();
+
+
+        const phone = {};
+        const today = new Date();
+        const arr = new Array();
+
+        console.log(typeof phone);
+        console.log(typeof today);
+        console.log(typeof arr);
+        
+        console.log(phone.constructor.name);
+        console.log(today.constructor.name);
+        console.log(arr.constructor.name);
+
+        const obj1 = {
+            name: '홍길동',
+            age:20,
+            info:function(){
+                // console.log(name);   >> 자바스크립트에서는 this를 무조건 붙여야 한다.
+                console.log(this.name, this.age);
+            }
+        }
+
+
+        obj1.info();
+
+        function f1(){
+            console.log(this.name, this.age);  // 여기서 this는 window 
+        }
+
+        var name = '박명수';
+        var age = 50;
+
+        f1();
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px; height: 150px;
+            background-color: gold;
+            border: 1px solid black;
+        }
+
+        .draggable{
+
+            position: relative;
+            left: 0;   
+            top: 0;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="draggable">Drag & Drop(relative)</h1>
+    <div id="box1" class="box draggable"></div>
+    <div id="box2" class="box draggable"></div>
+    <div id="box3" class="box draggable"></div>
+    <img src="images/catty01.png" class="draggable">
+
+    <script>
+
+
+        let obj; //드래그 대상 객체
+        let isDown = false;
+        let x = 0;
+        let y = 0;
+        // let bx = box1.getBoundingClientRect().x;
+        // let by = box1.getBoundingClientRect().y;
+        let bx = 0;
+        let by = 0;
+
+
+        //개체 이동 인터페이스
+        window.onmousedown = function() {
+
+            //누른 대상 > 빈영역 or 상자 ?
+            if (event.target.classList.contains('draggable')) {
+
+                //event.target.style.position = 'relative';
+
+                isDown = true;
+
+                //상자의 어느 부분을 눌렀는지?
+                x = event.offsetX;
+                y = event.offsetY;
+
+                bx = event.target.getBoundingClientRect().x - parseInt(event.target.style.left!='' ? event.target.style.left:0);
+                by = event.target.getBoundingClientRect().y - parseInt(event.target.style.top!='' ? event.target.style.top:0);
+
+                obj = event.target;
+
+
+            }
+        };
+
+        window.onmousemove = function() {
+            if (isDown) {
+                obj.style.left = event.clientX - x - bx + 'px';
+                obj.style.top = event.clientY - y - by + 'px';
+
+                //고스트 이미지 현상 제거
+                event.stopPropagation();
+                return false;
+            }
+        };
+
+        window.onmouseup = function() {
+            isDown = false;
+        };
+
+
+    </script>
+</body>
+</html>

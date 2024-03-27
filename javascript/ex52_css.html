@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script>
+        //화면 클릭 > 상자 생성 > 클린한 곳으로 이동
+
+        window.onmouseclick = function(){
+            
+            if(event.buttons ==1){
+                
+                const box = document.createElement('div');
+                box.className = 'box';
+    
+                const r = parseInt(Math.random() * 256);
+                const g = parseInt(Math.random() * 256);
+                const b = parseInt(Math.random() * 256);
+    
+                box.style.background = `rgb(${r},${g},${b})`;
+    
+                box.style.left = event.clientX - 75 + 'px';
+                box.style.top = event.clientY - 75 + 'px';
+    
+                document.body.appendChild(box);
+            } else if(event.buttons ==2){
+                document.body.removeChild(event.target);
+            }
+
+            window.oncontextmenu = function(){
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>

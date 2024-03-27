@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let name ='홍길동';
+        let age = 20;
+
+        // console.log('이름은' + name + '이고, 나이는' + age + '세입니다.');
+        // printf('이름은 %s이고, 나이는 %d세입니다.', name, age)
+
+
+        //JavaScript 문자열 표기법
+        //1. 'string'
+        //2. "string"
+        //3. `string` > template string  > 공백도 다 포함한다. 띄어쓰기, 엔터
+
+        let a = '홍길동';
+        let b = "홍길동";
+        let c = `홍길동`;
+
+        console.log(a==b);
+        console.log(a==c);
+
+        console.log(`이름은 ${name}이고, 나이는 ${age-1}세입니다.`);
+        console.log(`현재 시간은 ${new Date()}입니다.`);
+
+        let str =`
+            하나
+            둘
+            셋
+
+
+        `;
+        
+        console.log(str);
+
+        //테이블 > 새 행 추가
+
+        let temp3 =`
+            <tr>
+                <td>100</td>
+                <td>200</td>
+            </tr>
+        `;        
+
+
+
+
+    </script>
+</body>
+</html>

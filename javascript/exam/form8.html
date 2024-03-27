@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: #666;
+        }
+
+        #tbl1 {
+            border-collapse: collapse;
+            width: 500px;
+            height: 100px;
+        }
+
+        tr > td:first-child{
+            text-align: center;
+            border: 1px solid black;
+            padding: 12px;
+            background-color: #AAA;
+        }
+
+        td{
+            border: 1px solid black;
+            color: #111;
+        }
+
+        .txt1{
+            width: 80px;
+            margin: 10px;
+            outline: none;
+        }
+
+        .txt2{
+            margin: 10px;
+            width: 370px;
+            outline: none;
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+
+    <h1>우편 번호 검색</h1>
+    <form name="form1">
+        <table id="tbl1">
+            <tr>
+                <td>우편번호</td>
+                <td><input type="text" name="txt1" class="txt1"><input type="button" value="우편번호검사하기" name="btn1" ></td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" name="txt2" class="txt2"></td>
+            </tr>
+            <tr>
+                <td>상세주소</td>
+                <td><input type="text" name="txt2" class="txt2"></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+
+        let child;
+        
+        document.form1.btn1.onclick = function(){
+            child = window.open('./address.html','Address','width = 300 height = 300 left = 0 top = 0');
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #tbl1{border: 1px solid black; border-collapse: collapse;}
+        #tbl1 td{
+            border: 1px solid black;
+            width: 126px;
+            height: 126px;
+            font-size: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>테이블</h1>
+    <table id="tbl1">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+
+
+    <input type="text" id="txt1">
+
+    <hr>
+
+    <input type="submit" value="버튼" id="btn1">
+
+    <script>
+
+        const list = document.querySelectorAll('#tbl1 td');
+
+        list.forEach(td => {
+            td.onmousedown = function(){
+
+                //보조키의 눌림 상태
+                console.log(event.ctrlKey);
+                console.log(event.shiftKey);
+                console.log(event.altKey);
+
+                if(event.buttons ==1){
+
+                    if(!event.ctrlKey){
+                        const img = document.createElement('img');
+                        img.setAttribute('src','images/rect_icon01.png');
+                        event.target.appendChild(img);
+                        
+                    } else {
+                        event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+
+                    }
+
+
+
+                    
+                } else if(event.buttons==2){
+                    const img = document.createElement('img');
+                    img.setAttribute('src','images/rect_icon02.png');
+                    event.target.appendChild(img);
+
+                } 
+                // else if(event.buttons==4){
+                //     //클릭한 이미지 삭제
+                //     //- 부모태그.removeChild(자식태그)
+                //     //이때 event.target은 img임 
+                //     // event.target.removeChild(event.target.firstElementChild);
+                //     event.currentTarget.removeChild(event.currentTarget.firstElementChild);
+                // }
+
+
+
+            }
+        });
+
+        window.oncontextmenu = function(){
+            //현재 발생한 일을 없었던 일로하는 메서드
+            event.preventDefault();
+            // return false;
+        }
+
+        document.getElementById('txt1').onkeydown = function(){
+            return false;
+        };
+
+        // document.getElementById('btn1').onclick = function(){
+        //     event.preventDefault();
+        // }
+
+    </script>
+
+</body> 
+</html>

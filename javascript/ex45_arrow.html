@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">  
+
+    <script>
+
+        /* 
+        
+            화살표 함수, Arrow Function
+            - 자바의 람다 > 인터페이스를 구현한 익명 객체의 추상 메서드를 표현하는 기술
+            - 자바스크립트 > 익명 함수를 표현 하는 기술
+        
+        */
+
+        //1. 함수 선언문
+        function f1(){
+            console.log('f1');
+        }
+
+        f1();
+
+        //2. 함수 표현식(리터럴) == 익명 함수
+        const f2 = function(){
+            console.log('f2');
+        }
+        f2();
+
+        //3. 익명 함수 > 즉시 호출 > 스코프 관리 차원에서 사용(영역 관리)
+        // -> 지역변수를 선언하기 위해서 생성함
+        // let name ='홍길동'; //전역변수 선언 (전역변수는 생명주기가 브라우저가 종료될때 까지임
+        (function(){
+            // console.log('f3');
+            let name = '홍길동';
+
+        })();
+
+        //4. 익명 함수 > 화살표 함수
+        () => {
+            console.log('f4');
+        };
+        // f4();
+
+        //구현부 1줄 > 실행 블럭 생략
+        const f5 = () => console.log('f5');
+
+        //매개변수
+
+        const f6 = () => console.log('f6');
+        const f7 = (num) => console.log(num);
+        const f8 = num => console.log(num);
+        const f9 = (a,b) => console.log(a,b);
+
+        //반환값
+        const f10 = () => {return 100;};  // return, 중괄호 생략 가능 
+        const f11 = () => 100;
+
+        document.getElementById('btn1').onclick = function(){
+            //이벤트 발생 객체
+            //alert(event.target.value);
+            //alert(event.srcElement.value);
+            alert(this.value);
+        };
+
+        document.getElementById('btn2').onclick = () => {
+            // alert(evnet.target.value);
+            // alert(event.srcElement.value);
+            // alert(this.value);
+            //*** 화살표 함수는 어떤 객체를 통해서 호출이 되더라도, 그 안에서의 this는 무조건 window 객체이다.
+            alert(this == window);
+            
+        };
+        
+        // document.getElementById('btn2').onclick = () => alert();
+        
+        // setTimeout(function(){
+        //     alert();
+        // },1000)
+
+        // setTimeout(()=>alert(),1000);
+
+        const list = ['사과','귤','포도','바나나','딸기','파인애플','배','수박','복숭아','',''];
+
+        //탐색
+        // for(let i =0; i<list.length; i++){
+        //     console.log(list[i]);
+        // }
+
+        // for(let item in list){
+        //     console.log(item);
+        // }
+
+        // list.forEach(item => console.log(item));;
+
+
+        //map()
+        //- 가공 + 변환
+
+        console.log(list.map(item => item.length));
+
+        //이름 > 객체 변환(+나이(20), +주소(서울시))
+        const names =['홍길동','아무개','하하하'];
+
+        const olist1 = [];
+
+        for(let i =0; i<names.length; i++){
+            const o ={
+                name: names[i],
+                age: 20,
+                address: '서울시'
+            };
+            olist1.push(o);
+        }
+
+        console.log(olist1);
+
+        const olist2 = names.map(name => {return {
+            name: name,
+            age: 20,
+            address: '서울시'
+        }; });
+
+        console.log(olist2);
+
+        //filter()
+        console.log(list.filter(item => item.length>=3));
+
+        //find()
+        //- 요소 검색
+        //- 처음 만나는 조건을 만족한 값을 반환
+        console.log(list.find(item => item.length >= 3));
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
