@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box{
+            width: 560px;
+            height: 560px;
+            /* background-color: cornflowerblue; */
+            margin: 100px;  
+            /* transition: all 1s linear; */
+
+        }
+        #box:hover{
+            /* transform: rotate(360deg); */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box"><img src="../images/roulette.png" alt=""></div>
+
+    <script>
+
+        const box= document.getElementById('box');
+        let degree = 1;
+        let timer = 0;
+
+        box.addEventListener('click',function(){
+            if(timer==0){
+                timer = setInterval(function(){
+                    box.style.transform = `rotate(${degree}deg)`;
+                    degree+=10;
+                }, 10);
+            } else {
+                clearInterval(timer); 
+                timer = 0;  
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="txt1" id="txt1">
+
+
+
+    <!-- 로컬 설치 -->
+    <script src="js/jquery-3.7.1.js"></script>
+
+    <!-- CDN 설치 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script>
+
+        // console.log(jQuery);
+
+        /* 
+        
+            jQuery
+            - https://jquery.com
+            - jQuery is a fast, small, and feature-rich JavaScript library.
+            - JavaScript
+
+            jQuery 설치
+            1. 로컬 설치 > 파일 다운로드 + 참조
+            2. CDN 설치  > 다른 서버의 자원 + 참조  
+        
+        
+        */
+
+        //1. BOM > BOM 트리
+        window.document.all.txt1.value = 'BOM';
+
+        //2. DOM > getXXX 메서드 or DOM 트리(Axis) or querySelector 메서드
+        document.getElementById('txt1').value = 'DOM';
+
+        //3. jQuery
+        // jQuery(검색 조건(CSS선택자));
+        //- querySelector
+        jQuery('#txt1').val('jQuery');
+
+
+
+    </script>
+
+</body>
+</html>

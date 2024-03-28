@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>jQuery 태그 조작</h1>
+
+    <input type="button" value="버튼1" id="btn1">
+    <hr>
+    <div id="box1">상자</div>
+    <hr>
+    <input type="text" id="txt1">
+
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $('#btn1').click(function(){
+            //콘텐츠 조작
+            //- innerText, textContent > text()
+            //- innerHTML > html()
+            //- value > val()
+
+            // $('#box1').text('홍길동');  //쓰기
+            // alert($('#box1').text());   //읽기
+
+            // $('#box1').html('<input type="text">');
+
+            // $('#txt1').val('홍길동');
+            // alert($('#txt1').val());
+
+            //HTML 속성 조작
+            //BOM
+            //- obj.prop         > 읽기
+            //- obj.ptop = value > 쓰기
+
+            //DOM
+            //- obj.getAttribute('prop')
+            //- obj.setAttribute('prop', value)
+
+            //jQuery
+            //- obj.attr('prop')
+            //- obj.attr('prop',value)
+            //- obj.prop('prop')
+            //- obj.prop('prop', value)
+
+
+            // $('#txt1').attr('size', 10)
+            //           .attr('title', '입력하세요.')
+            //           .attr('maxlength', 5);
+
+            // $('#txt1').attr({
+            //     size: 10,
+            //     title: '입력',
+            //     maxlength: 5
+            // })
+
+            //태그 추가
+            //box.innerHTML = '<img>'
+            // $('#box1').html($('#box1').html()+'<img src="images/catty01.png">');
+
+            // $('#box1').append(`<img src="images/catty0${n}.png">`);
+            // $('#box1').prepend(`<img src="images/catty0${n}.png">`);
+            // n++;
+
+            // let cat = document.createElement('img');
+            // cat.style.border    
+
+            // $('#box1').append(`<img src="images/catty0${n}.png">`);
+            // $('#box1 img:last-child').css('border','1px solid black');
+            // n++; 
+
+            // $(`<img src="images/catty0${n}.png">`)
+            //     .css('border','1px solid black')
+            //     .appendTo($('#box1'));
+                
+
+            //부모.removeChile(자식)
+            $('input').remove();
+
+
+
+        });
+
+        let n = 1;
+
+
+    </script>
+</body>
+</html>

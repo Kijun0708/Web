@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>jQuery Event</h1>
+    <input type="button" value="버튼1" id="btn1" class="btn">
+    <input type="button" value="버튼2" id="btn2" class="btn">
+    <input type="button" value="버튼3" id="btn3" class="btn">
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+
+        //1. BOM
+        //- <input onclick="">
+        //- btn.onclick = function(){}
+        //- btn.onclick = null;
+
+        //2. DOM
+        //- btn.addEventListner('click' function(){});
+        //- btn.removeEventListner('click' function(){});
+
+        //3. jQuery
+        //- 이벤트 함수
+
+
+        /* 
+        
+            jQuery 이벤트 함수
+            1. 전용 이벤트 함수
+                - 객체.이벤트함수(콜백함수)
+                
+            2. 범용 이벤트 함수
+                - 객체.on(이벤트명,콜백함수)
+
+
+
+        
+                
+                
+                
+                */
+
+            // function abdfasdf(){
+            //     alert('알파벳');
+            // }
+
+            // const fn = abdfasdf;
+            // fn();
+
+            //jQuery를 $변수에 넣어서 사용한다.
+            var $ = jQuery;
+
+            // $('#btn1').click(Callback Function);
+            //전용
+            // $('#btn1').click(function(){
+            //     alert();
+            // });
+
+            // //범용
+            // $('#btn2').on('click',function(){
+            //     alert();
+            // })
+
+            // $('#btn3').click(function(){
+
+            //     //이벤트 주체?
+            //     // alert(evnet.target.id);
+            //     alert(this.id);
+
+            //     $('#btn1').off('click');
+
+            // })
+
+            //버튼 3개 > 동일한 이벤트 일괄 추가
+            const list = document.querySelectorAll('.btn');
+
+            // list.forEach(btn => {
+            //     btn.onclick = function(){
+            //         alert(event.target.id);
+            //     };
+            // });
+
+
+            $('.btn').click(function(){
+                alert(event.target.id);
+            })
+
+               
+            jQuery('#btn1')
+               
+            //$('#btn1')
+               
+               
+               
+    </script>
+</body>
+</html>

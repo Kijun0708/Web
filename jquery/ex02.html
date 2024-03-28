@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>jQuery() 함수</h1>
+
+    <input type="button" value="확인" id="btn1" name="btn1">
+    <hr>
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+    <div id="box4" class="box">상자4</div>
+    <div id="box5" class="box">상자5</div>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+
+        /* 
+        
+            jQuery() 함수
+            - CSS 선택자를 사용해서 태그를 검색한다.
+            - 자바스크립트 객체를 jQuery 객체로 변환한다.
+            - 동적으로 태그를 생성한다.
+            
+            1. jQuery() 함수로 찾은 결과는 무조건 배열이다. (1개여도 배열)
+            2. 반환값에 무언가를 적용하면(css()).. 무조건 자동으로 루프가 적용되서 각 요소마다 적용된다.
+
+        */
+
+        //순수 자바스크립트 > 바닐라 스크립트
+        document.getElementById('btn1').onclick = function(){
+
+            //jQuery + CSS
+            jQuery('#btn1').css('color', 'blue');
+
+
+            //DOM
+            const list = document.getElementsByClassName('box');
+
+            // for(let i=0; i<list.length; i++) {
+            //     list[i].style.color = 'blue';
+            // }
+
+
+
+            // 유사 배열이라 forEach로 반복문을 사용할 수 없음.
+            // list.forEach(box => box.style.color = 'yellow');
+            
+            // 유사 배열을 순수배열로 변환 해야함
+            // Array.from(list).forEach(box => box.style.color = 'yellow');
+
+
+
+
+            // alert(jQuery('.box').length); > 배열인지 확인
+
+            // const list2 = jQuery('.box');
+
+            // for(let i =0; i<list2.length; i++){
+            //     list2[i].style.color ='red';
+            // }
+            
+            // jQuery('.box').css('color', 'green');
+
+            //태그 선택자
+            // jQuery('div').css('color', 'orange');
+            
+            //아이디 선택자
+            // jQuery('#box1').css('color', 'orange');
+            
+            //클래스 선택자
+            // jQuery('.box').css('color', 'orange');
+
+            //기타 등등
+            // jQuery('h1, div:nth-child(odd)').css('color', 'orange');
+
+            //*********** 주의!!!
+            const a = document.all.btn1;               //BOM
+            const b = document.getElementById('btn1'); //DOM
+            const c = jQuery('#btn1');                 //jQuery
+
+            //BOM.DOM
+            // document.all.btn1.setAttribute('title', 'DOM');
+
+
+            //DOM.BOM
+            // document.getElementById('btn1').onclick = function(){};
+
+
+            // alert(a===b);   > true
+            // alert(a==c);    > false
+
+            //a.css('color', 'blue')   ;
+            //c.style.color = 'blue';
+
+            //BOM(DOM) 객체 > (형변환) > jQuery 객체
+            jQuery(a).css('color','red');
+            
+            
+            
+            //jQuery 객체 > (형변환) > BOM(DOM) 객체
+            c[0].style.color = 'red';
+
+
+        };
+
+    </script>
+</body>
+</html>
